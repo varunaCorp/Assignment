@@ -55,13 +55,17 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
 
         holder.name.setText(userArrayList.get(position).getName());
         holder.email.setText(userArrayList.get(position).getEmail());
-        holder.email.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.outline_email_black_18,0,0,0);
-      //  holder.gender.setText(userArrayList.get(position).getGender());
-        holder.status.setText(userArrayList.get(position).getStatus());
         if(userArrayList.get(position).getGender().equalsIgnoreCase("male")){
         holder.name.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.outline_man_black_18,0,0,0);}
         else {
             holder.name.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.outline_woman_black_18, 0, 0, 0);
+        }
+        if(userArrayList.get(position).getStatus().equalsIgnoreCase("active")){
+            holder.status.setImageResource(R.drawable.active_bg);
+        }
+        else {
+            holder.status.setImageResource(R.drawable.inactive_bg);
+
         }
     }
 
@@ -79,7 +83,7 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
         @BindView(R.id.gender)
         TextView gender;
         @BindView(R.id.status)
-        TextView status;
+        ImageView status;
 
 
 

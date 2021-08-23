@@ -34,7 +34,7 @@
             android:layout_below="@+id/name"
             android:id="@+id/email"
             android:text=""
-            android:drawablePadding="5dp"
+            android:layout_marginLeft="5dp"
             android:textSize="16sp"
             android:fontFamily="sans-serif"
             android:layout_width="wrap_content"
@@ -47,12 +47,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             />
-        <TextView
-            android:layout_below="@+id/gender"
+        <ImageView
+            android:layout_alignParentRight="true"
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
             />
 
 
